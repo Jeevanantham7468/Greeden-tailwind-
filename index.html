@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenden - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#22c55e',
+                        dark: '#166534',
+                        light: '#f0fdf4',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-light font-sans">
+
+    <!-- NAVBAR -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-2">
+                    <i class="fa-solid fa-leaf text-primary text-2xl"></i>
+                    <span class="text-xl font-bold text-dark">Greenden</span>
+                </a>
+
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-dark font-semibold border-b-2 border-primary pb-0.5">Home</a>
+                    <a href="products.html" class="text-gray-600 hover:text-dark transition">Products</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-dark transition">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menuBtn" class="md:hidden text-dark text-2xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <a href="index.html" class="block py-2 text-dark font-semibold border-l-4 border-primary pl-3">Home</a>
+                <a href="products.html" class="block py-2 text-gray-600 hover:text-dark pl-3">Products</a>
+                <a href="contact.html" class="block py-2 text-gray-600 hover:text-dark pl-3">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="bg-gradient-to-br from-green-50 to-green-100 min-h-[85vh] flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-dark leading-tight">
+                        Bring Nature <span class="text-primary">Into Your Home</span>
+                    </h1>
+                    <p class="mt-6 text-gray-600 text-lg leading-relaxed">
+                        Discover our curated collection of premium indoor plants, organic gardening supplies, and sustainable home decor. Transform your living space into a green sanctuary.
+                    </p>
+                    <div class="mt-8 flex flex-wrap gap-4">
+                        <a href="products.html" class="bg-primary hover:bg-dark text-white px-8 py-3 rounded-full font-semibold transition transform hover:scale-105">
+                            Shop Now
+                        </a>
+                        <a href="contact.html" class="border-2 border-dark text-dark hover:bg-dark hover:text-white px-8 py-3 rounded-full font-semibold transition">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <img src="https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?w=600&h=600&fit=crop" alt="Plants" class="rounded-3xl shadow-2xl w-full max-w-md object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-dark">Why Choose Greenden?</h2>
+                <p class="mt-4 text-gray-500 max-w-2xl mx-auto">We provide the best quality plants and services for your green journey.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="text-center p-8 rounded-2xl bg-green-50 hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa-solid fa-truck text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">Free Delivery</h3>
+                    <p class="text-gray-500">Free shipping on all orders over $50. Plants delivered safely to your doorstep.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="text-center p-8 rounded-2xl bg-green-50 hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa-solid fa-seedling text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">Premium Quality</h3>
+                    <p class="text-gray-500">Handpicked plants grown with care in sustainable, organic conditions.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="text-center p-8 rounded-2xl bg-green-50 hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa-solid fa-headset text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">24/7 Support</h3>
+                    <p class="text-gray-500">Our plant experts are always available to help you care for your greens.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="py-20 bg-green-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=600&h=500&fit=crop" alt="About Greenden" class="rounded-3xl shadow-lg w-full object-cover">
+                <div>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-dark">About Greenden</h2>
+                    <p class="mt-6 text-gray-600 leading-relaxed">
+                        Founded in 2020, Greenden started with a simple mission — to make greenery accessible to everyone. We believe that plants have the power to transform spaces and improve well-being.
+                    </p>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        Our team of horticulturists and designers curate the finest selection of plants, pots, and accessories to help you create your perfect indoor jungle.
+                    </p>
+                    <div class="mt-8 flex gap-8">
+                        <div>
+                            <p class="text-3xl font-bold text-primary">500+</p>
+                            <p class="text-gray-500 text-sm">Plant Species</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-bold text-primary">10K+</p>
+                            <p class="text-gray-500 text-sm">Happy Customers</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-bold text-primary">50+</p>
+                            <p class="text-gray-500 text-sm">Cities Served</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-dark">What Our Customers Say</h2>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-8 bg-green-50 rounded-2xl">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Amazing quality plants! My monstera arrived in perfect condition and has been thriving ever since."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold">S</div>
+                        <div>
+                            <p class="font-semibold text-dark">Sarah M.</p>
+                            <p class="text-sm text-gray-400">New York</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8 bg-green-50 rounded-2xl">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6">"The best online plant store I've found. Fast delivery and excellent packaging. Highly recommended!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-dark rounded-full flex items-center justify-center text-white font-bold">J</div>
+                        <div>
+                            <p class="font-semibold text-dark">James K.</p>
+                            <p class="text-sm text-gray-400">Los Angeles</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8 bg-green-50 rounded-2xl">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Their plant care guides are so helpful. I'm a beginner and my plants are still alive and growing!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold">A</div>
+                        <div>
+                            <p class="font-semibold text-dark">Anika R.</p>
+                            <p class="text-sm text-gray-400">Chicago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="py-20 bg-dark">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white">Join Our Green Community</h2>
+            <p class="mt-4 text-green-200">Subscribe for plant care tips, new arrivals, and exclusive offers.</p>
+            <div class="mt-8 flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
+                <input type="email" placeholder="Enter your email" class="flex-1 px-6 py-3 rounded-full outline-none text-gray-700">
+                <button class="bg-primary hover:bg-green-600 text-white px-8 py-3 rounded-full font-semibold transition">
+                    Subscribe
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-leaf text-primary text-xl"></i>
+                        <span class="text-lg font-bold text-white">Greenden</span>
+                    </div>
+                    <p class="text-sm leading-relaxed">Bringing nature closer to you. Premium plants and sustainable gardening supplies.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-primary transition">Home</a></li>
+                        <li><a href="products.html" class="hover:text-primary transition">Products</a></li>
+                        <li><a href="contact.html" class="hover:text-primary transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Categories</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-primary transition">Indoor Plants</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Outdoor Plants</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Accessories</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Follow Us</h4>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition"><i class="fa-brands fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
+                <p>&copy; 2026 Greenden. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menuBtn').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>

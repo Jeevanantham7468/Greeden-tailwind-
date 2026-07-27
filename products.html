@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenden - Products</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#22c55e',
+                        dark: '#166534',
+                        light: '#f0fdf4',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-light font-sans">
+
+    <!-- NAVBAR -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="flex items-center gap-2">
+                    <i class="fa-solid fa-leaf text-primary text-2xl"></i>
+                    <span class="text-xl font-bold text-dark">Greenden</span>
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-gray-600 hover:text-dark transition">Home</a>
+                    <a href="products.html" class="text-dark font-semibold border-b-2 border-primary pb-0.5">Products</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-dark transition">Contact</a>
+                </div>
+                <button id="menuBtn" class="md:hidden text-dark text-2xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <a href="index.html" class="block py-2 text-gray-600 hover:text-dark pl-3">Home</a>
+                <a href="products.html" class="block py-2 text-dark font-semibold border-l-4 border-primary pl-3">Products</a>
+                <a href="contact.html" class="block py-2 text-gray-600 hover:text-dark pl-3">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <section class="bg-gradient-to-r from-green-600 to-green-800 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-5xl font-bold text-white">Our Products</h1>
+            <p class="mt-4 text-green-100 text-lg">Explore our collection of premium plants and accessories</p>
+        </div>
+    </section>
+
+    <!-- FILTER TABS -->
+    <section class="py-8 bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap gap-3 justify-center">
+                <button class="filter-btn active bg-primary text-white px-6 py-2 rounded-full font-semibold transition" data-filter="all">All</button>
+                <button class="filter-btn bg-green-100 text-dark px-6 py-2 rounded-full font-semibold hover:bg-primary hover:text-white transition" data-filter="indoor">Indoor</button>
+                <button class="filter-btn bg-green-100 text-dark px-6 py-2 rounded-full font-semibold hover:bg-primary hover:text-white transition" data-filter="outdoor">Outdoor</button>
+                <button class="filter-btn bg-green-100 text-dark px-6 py-2 rounded-full font-semibold hover:bg-primary hover:text-white transition" data-filter="accessories">Accessories</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS GRID -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="productsGrid">
+
+                <!-- Product 1 -->
+                <div class="product-card bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1" data-category="indoor">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?w=400&h=300&fit=crop" alt="Monstera" class="w-full h-56 object-cover">
+                        <span class="absolute top-3 left-3 bg-primary text-white text-xs px-3 py-1 rounded-full font-semibold">Popular</span>
+                        <button class="absolute top-3 right-3 w-9 h-9 bg-white rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 transition">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-dark">Monstera Deliciosa</h3>
+                        <p class="text-gray-400 text-sm mt-1">Large indoor plant with split leaves</p>
+                        <div class="flex items-center mt-3 text-yellow-400 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <span class="text-gray-400 ml-2">(128)</span>
+                        </div>
+                        <div class="flex items-center justify-between mt-4">
+                            <span class="text-2xl font-bold text-dark">$45</span>
+                            <button class="bg-primary hover:bg-dark text-white px-5 py-2 rounded-full text-sm font-semibold transition">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1" data-category="indoor">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1509423350716-97f9360b4e09?w=400&h=300&fit=crop" alt="Snake Plant" class="w-full h-56 object-cover">
+                        <button class="absolute top-3 right-3 w-9 h-9 bg-white rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 transition">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-dark">Snake Plant</h3>
+                        <p class="text-gray-400 text-sm mt-1">Low maintenance air purifier</p>
+                        <div class="flex items-center mt-3 text-yellow-400 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span class="text-gray-400 ml-2">(96)</span>
+                        </div>
+                        <div class="flex items-center justify-between mt-4">
+                            <span class="text-2xl font-bold text-dark">$32</span>
+                            <button class="bg-primary hover:bg-dark text-white px-5 py-2 rounded-full text-sm font-semibold transition">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1" data-category="indoor">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=400&h=300&fit=crop" alt="Fiddle Leaf Fig" class="w-full h-56 object-cover">
+                        <span class="absolute top-3 left-3 bg-red-500 text-white text-xs px-3 py-1 rounded-full font-semibold">Sale</span>
+                        <button class="absolute top-3 right-3 w-9 h-9 bg-white rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 transition">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-dark">Fiddle Leaf Fig</h3>
+                        <p class="text-gray-400 text-sm mt-1">Statement plant for any room</p>
+                        <div class="flex items-center mt-3 text-yellow-400 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <span class="text-gray-400 ml-2">(74)</span>
+                        </div>
+                        <div class="flex items-center justify-between mt-4">
+                            <div>
+                                <span class="text-gray-400 line-through text-sm">$60</span>
+                                <span class="text-2xl font-bold text-dark ml-2">$48</span>
+                            </div>
+                            <button class="bg-primary hover:bg-dark text-white px-5 py-2 rounded-full text-sm font-semibold transition">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1" data-category="outdoor">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=400&h=300&fit=crop" alt="Succulent" class="w-full h-56 object-cover">
+                        <button class="absolute top-3 right-3 w-9 h-9 bg-white rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 transition">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-dark">Succulent Set</h3>
+                        <p class="text-gray-400 text-sm mt-1">Set of 4 mini succulents</p>
+                        <div class="flex items-center mt-3 text-yellow-400 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span class="text-gray-400 ml-2">(203)</span>
+                        </div>
+                        <div class="flex items-center justify-between mt-4">
+                            <span class="text-2xl font-bold text-dark">$28</span>
+                            <button class="bg-primary hover:bg-dark text-white px-5 py-2 rounded-full text-sm font-semibold transition">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1" data-category="accessories">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=400&h=300&fit=crop" alt="Ceramic Pot" class="w-full h-56 object-cover">
+                        <span class="absolute top-3 left-3 bg-primary text-white text-xs px-3 py-1 rounded-full font-semibold">New</span>
+                        <button class="absolute top-3 right-3 w-9 h-9 bg-white rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 transition">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-dark">Ceramic Plant Pot</h3>
+                        <p class="text-gray-400 text-sm mt-1">Handcrafted ceramic pot with drainage</p>
+                        <div class="flex items-center mt-3 text-yellow-400 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <span class="text-gray-400 ml-2">(58)</span>
+                        </div>
+                        <div class="flex items-center justify-between mt-4">
+                            <span class="text-2xl font-bold text-dark">$24</span>
+                            <button class="bg-primary hover:bg-dark text-white px-5 py-2 rounded-full text-sm font-semibold transition">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1" data-category="outdoor">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1611909023032-2d6b3134ecba?w=400&h=300&fit=crop" alt="Lavender" class="w-full h-56 object-cover">
+                        <button class="absolute top-3 right-3 w-9 h-9 bg-white rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 transition">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-dark">Lavender Plant</h3>
+                        <p class="text-gray-400 text-sm mt-1">Fragrant outdoor flowering plant</p>
+                        <div class="flex items-center mt-3 text-yellow-400 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span class="text-gray-400 ml-2">(145)</span>
+                        </div>
+                        <div class="flex items-center justify-between mt-4">
+                            <span class="text-2xl font-bold text-dark">$18</span>
+                            <button class="bg-primary hover:bg-dark text-white px-5 py-2 rounded-full text-sm font-semibold transition">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1" data-category="accessories">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&h=300&fit=crop" alt="Watering Can" class="w-full h-56 object-cover">
+                        <button class="absolute top-3 right-3 w-9 h-9 bg-white rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 transition">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-dark">Brass Watering Can</h3>
+                        <p class="text-gray-400 text-sm mt-1">Elegant 1.5L brass watering can</p>
+                        <div class="flex items-center mt-3 text-yellow-400 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <span class="text-gray-400 ml-2">(42)</span>
+                        </div>
+                        <div class="flex items-center justify-between mt-4">
+                            <span class="text-2xl font-bold text-dark">$35</span>
+                            <button class="bg-primary hover:bg-dark text-white px-5 py-2 rounded-full text-sm font-semibold transition">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1" data-category="indoor">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1620803366004-119b57f54cd6?w=400&h=300&fit=crop" alt="Peace Lily" class="w-full h-56 object-cover">
+                        <button class="absolute top-3 right-3 w-9 h-9 bg-white rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 transition">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-dark">Peace Lily</h3>
+                        <p class="text-gray-400 text-sm mt-1">Elegant flowering indoor plant</p>
+                        <div class="flex items-center mt-3 text-yellow-400 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <span class="text-gray-400 ml-2">(87)</span>
+                        </div>
+                        <div class="flex items-center justify-between mt-4">
+                            <span class="text-2xl font-bold text-dark">$29</span>
+                            <button class="bg-primary hover:bg-dark text-white px-5 py-2 rounded-full text-sm font-semibold transition">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 bg-dark">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white">Can't find what you're looking for?</h2>
+            <p class="mt-4 text-green-200">Contact our plant experts for personalized recommendations.</p>
+            <a href="contact.html" class="inline-block mt-8 bg-primary hover:bg-green-600 text-white px-8 py-3 rounded-full font-semibold transition">
+                Get in Touch
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-leaf text-primary text-xl"></i>
+                        <span class="text-lg font-bold text-white">Greenden</span>
+                    </div>
+                    <p class="text-sm leading-relaxed">Bringing nature closer to you. Premium plants and sustainable gardening supplies.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-primary transition">Home</a></li>
+                        <li><a href="products.html" class="hover:text-primary transition">Products</a></li>
+                        <li><a href="contact.html" class="hover:text-primary transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Categories</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-primary transition">Indoor Plants</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Outdoor Plants</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Accessories</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Follow Us</h4>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition"><i class="fa-brands fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
+                <p>&copy; 2026 Greenden. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menuBtn').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => {
+                    b.classList.remove('bg-primary', 'text-white');
+                    b.classList.add('bg-green-100', 'text-dark');
+                });
+                this.classList.remove('bg-green-100', 'text-dark');
+                this.classList.add('bg-primary', 'text-white');
+
+                const filter = this.dataset.filter;
+                document.querySelectorAll('.product-card').forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
