@@ -31,18 +31,8 @@ Greeden/
 └── README.md
 ```
 
-## 📸 Screenshots
-
-Add screenshots of your website here.
 
 Example:
-
-```
-screenshots/
-├── home.png
-├── products.png
-└── contact.png
-```
 
 ## ▶️ Getting Started
 
